@@ -59,3 +59,11 @@ $margin-default: 1.875rem;
     opacity: 1;
   }
 }
+
+@media (max-width: 47.5rem){
+  .movieRow{
+    &--left, &--right{
+      opacity: 1;
+    }
+  }
+}

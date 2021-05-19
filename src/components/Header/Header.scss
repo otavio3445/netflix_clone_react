@@ -32,3 +32,20 @@ header.black{
     }
   }
 }
+
+@media (max-width: 47.5rem) {
+  header{
+    height: 3rem;
+  }
+  
+  .header{
+
+    &--logo{
+      height: 1rem;
+    }
+
+    &--user{
+      height: 1.5rem;
+    }
+  }
+}

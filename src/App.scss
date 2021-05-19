@@ -34,3 +34,9 @@ footer{
     transform: scale(.3);
   }
 }
+
+@media (max-width: 47.5rem) {
+  .lists{
+    margin-top: 1rem;
+  }
+}

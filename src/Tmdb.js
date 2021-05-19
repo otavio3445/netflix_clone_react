@@ -61,23 +61,24 @@ export default {
     let res = await fetch(`${baseURL}/get-api-vars`);
     let resObj = await res.json();
     let API_KEY = await resObj.API_KEY;
+    let url = await resObj.API_URL;
+
     let info = {};
-    
     if (movieId) {
       switch (type) {
         case 'movie':
-          info = await fillItems(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+          info = await fillItems(url, `/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
           break;
           
-        case 'tv':
-          info = await fillItems(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
-          break;
-        default:
-          info = null;
-          break;
-      }
-    }
-    
+          case 'tv':
+            info = await fillItems(url, `/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+            break;
+            default:
+              info = null;
+              break;
+            }
+          }
+          
     return info;
   }
 }
