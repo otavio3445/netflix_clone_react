@@ -8,7 +8,6 @@ const FeaturedMovie = ({ item }) => {
   item.genres.forEach((e)=>{
     genres.push(e.name);
   })
-  console.log(genres);
 
   return (
     <section className="featured" style={{

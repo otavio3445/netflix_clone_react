@@ -12,14 +12,14 @@ $margin-default: 1.875rem;
     padding-left: $margin-default;
   }
 
+  &--list{
+    transition: all ease .5s;
+  }
+
   &--item{
     display: inline-block;
     width: 9.375rem;
     cursor: pointer;
-  }
-
-  &--list{
-    width: 1000rem;
   }
 
   &--item img{
@@ -30,5 +30,32 @@ $margin-default: 1.875rem;
     &:hover{
       transform: scale(1);
     }
+  }
+
+  &--left, &--right{
+    position: absolute;
+    width: 2.5rem;
+    height: 14.063rem;
+    background-color: rgba(#000000, .6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease .5s;
+  }
+
+  &--left{
+    left: 0;
+  }
+
+  &--right{
+    right: 0;
+  }
+
+  &:hover &--left, &:hover &--right{
+    opacity: 1;
   }
 }
